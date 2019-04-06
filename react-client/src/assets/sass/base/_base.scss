@@ -1,0 +1,104 @@
+@import "../../../assets/sass/abstract/mixins.scss";
+@import "../../../assets/sass/abstract/variables.scss";
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  @include responsive("phone") {
+    overflow-y: auto;
+  }
+  a {
+    color: inherit; /* blue colors for links too */
+    text-decoration: none !important; /* no underline */
+    &:hover {
+      color: inherit;
+    }
+  }
+}
+
+html {
+  // This defines what 1rem is
+  font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+
+  @include responsive(tab-land) {
+    // width < 1200?
+    font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
+  }
+
+  @include responsive(tab-port) {
+    // width < 900?
+    font-size: 50%; //1 rem = 8px, 8/16 = 50%
+  }
+
+  @include responsive(big-desktop) {
+    font-size: 75%; //1rem = 12, 12/16
+  }
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Lato, sans-serif";
+  // padding: 3rem;
+
+  @include responsive(tab-port) {
+    // width < 900?
+    padding: 0px;
+    margin: 0px;
+  }
+  @include responsive(small-phone) {
+    // width < 400?
+    padding: 0px;
+    margin: 0px;
+  }
+}
+
+.container-fluid {
+  padding: 0px;
+  @include responsive(tab-port) {
+    // width < 900?
+    padding: 0px;
+    margin: 0px;
+  }
+  @include responsive(small-phone) {
+    // width < 400?
+    padding: 0px;
+    margin: 0px;
+  }
+}
+
+a:hover {
+  color: $color-white;
+}
+
+.row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+span {
+  display: block;
+}
+
+hr {
+  background-color: $color-white;
+  width: 75%;
+  margin: 0 auto;
+}
+
+.w100 {
+  width: 100%;
+}
+
+.--red {
+  background-color: $color-primary-light;
+}

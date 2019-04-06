@@ -1,0 +1,39 @@
+// COLORS
+$color-primary: #ff5b5c;
+$color-primary-light: #ff7b7c;
+$color-primary-dark: #cc4849;
+
+$color-secondary: #34b75c;
+$color-secondary-light: #3edd6e;
+
+$color-tertiary: #ffd700;
+
+$color-grey-light-1: #eee;
+
+$color-grey-dark: #777;
+$color-grey-dark-2: #999;
+$color-grey-dark-3: #464646;
+
+$color-off-white: #eee;
+$color-white: #fff;
+$color-black: #222;
+
+// FONT
+$default-font-size: 1.6rem;
+$default-font-family: Lato, sans-serif;
+
+//MISC.
+
+$default-border-radius: 20px;
+
+.negative {
+  color: $color-primary;
+}
+
+.positive {
+  color: $color-secondary;
+}
+
+.neutral {
+  color: $color-tertiary;
+}

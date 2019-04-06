@@ -1,0 +1,12 @@
+@import "../../../assets/sass/abstract/mixins.scss";
+
+.Backdrop {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.99);
+  @include responsive("phone") {
+    height: 110rem;
+  }
+}

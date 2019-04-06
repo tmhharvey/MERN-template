@@ -1,0 +1,42 @@
+@import "../../../assets/sass/abstract/variables.scss";
+@import "../../../assets/sass/base/base.scss";
+
+.Modal {
+  z-index: 500;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(black, 0.7),
+      rgba(darken($color-primary-dark, 20%), 0.8)
+    ),
+    url("../../../assets/img/multioColorBricks.jpg");
+  background-size: cover;
+  border-radius: $default-border-radius;
+  border: 2px outset $color-black;
+  box-shadow: 1px 1px 1px black;
+  box-sizing: border-box;
+  transition: all 0.9s ease-out;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 95%;
+  width: 85%;
+  @include responsive("tab-land") {
+    height: 100%;
+  }
+  @include responsive("phone") {
+    height: 125rem;
+    width: 95%;
+  }
+  @include responsive("phone") {
+    height: 135rem;
+    width: 95%;
+  }
+  &__close {
+    color: $color-white;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 2rem;
+  }
+}
