@@ -35,10 +35,16 @@ app.use(cors(corsOptions));
 // const userController = require("./controllers/userController");
 // app.use("/user", userController);
 
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname + "/mern-template/build/index.html"));
-});
+const port = process.env.PORT || 9000;
 
-app.listen(process.env.PORT || 9000, () => {
-  console.log("listening on port 9000");
+// ... other app.use middleware
+app.use(express.static(path.join(__dirname, "client", "build")));
+
+// ...
+// Right before your app.listen(), add this:
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+});
+app.listen(port, () => {
+  console.log("listening on port: " + port);
 });
