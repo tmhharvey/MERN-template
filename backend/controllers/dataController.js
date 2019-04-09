@@ -1,5 +1,5 @@
-// const express = require("express");
-// const router = express.Router();
+const express = require("express");
+const router = express.Router();
 
 // //Post Example
 // router.post("/demodata", async (req, res) => {
@@ -21,4 +21,4 @@
 //   }
 // });
 
-// module.exports = router;
+module.exports = router;
