@@ -16,7 +16,7 @@ app.use(
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, "mern-template/build")));
+app.use(express.static(path.join(__dirname, "mutaPets/build")));
 
 const corsOptions = {
   origin: `http://localhost:3000`,
@@ -26,8 +26,11 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 // ROUTING
-// const authController = require("./controllers/authController");
-// app.use("/auth", authController);
+const authController = require("./controllers/api/register");
+app.use("/auth", authController);
+
+const userController = require("./controllers/api/userController");
+app.use("/user", userController);
 
 // const dataController = require("./controllers/dataController");
 // app.use("/data", dataController);

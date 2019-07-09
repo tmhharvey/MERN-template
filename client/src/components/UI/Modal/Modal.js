@@ -6,7 +6,7 @@ class Modal extends Component {
   render() {
     return (
       <>
-        <Backdrop show={this.props.show} topStyle={"0%"} leftStyle={"0%"} />
+        <Backdrop show={this.props.show} topStyle={"0%"} leftStyle={"-20%"} />
         <div
           className="Modal"
           style={{

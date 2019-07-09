@@ -1,0 +1,16 @@
+.bottomLayout {
+  border: 1px solid green;
+  height: 28%;
+  &__monsterImage {
+    border: 1px solid darkgreen;
+  }
+  &__monsterStats {
+    border: 1px solid orangered;
+  }
+  &__content {
+    border: 1px solid skyblue;
+  }
+  &__charImage {
+    border: 1px solid pink;
+  }
+}

@@ -1,0 +1,60 @@
+@import "../assets/sass/base/base";
+@import "../assets/sass/base/typography";
+@import "../assets/sass/abstract/variables.scss";
+
+.mainDashboard {
+  border: 1px solid #ccc;
+  height: 100vh;
+}
+
+.mainContent {
+  border: solid 1px lightblue;
+  height: 65%;
+  padding: 5rem 5rem;
+  background-color: #cc744e;
+}
+
+.selectPetCard {
+  height: 20rem;
+  width: 15rem;
+  border: 3px solid $color-tertiary;
+  margin: 0 auto;
+  margin-top: 1rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(darken(#fff, 35%), 0.95),
+    rgba(#cc744e, 0.95)
+  );
+  &__title {
+    position: absolute;
+    left: 50%;
+    top: 12%;
+    font-weight: bold;
+    transform: translate(-50%, -50%);
+    color: black;
+  }
+  img {
+    height: 100%;
+    width: 100%;
+    border-radius: 2rem;
+    z-index: 1;
+  }
+  &:hover {
+    background-image: linear-gradient(
+      to right bottom,
+      rgba(lighten(#fff, 35%), 0.95),
+      rgba(lighten(#cc744e, 2%), 0.95)
+    );
+  }
+}
+
+h2,
+h3 {
+  color: #fff;
+}
+
+h1 {
+  color: $color-tertiary;
+}
