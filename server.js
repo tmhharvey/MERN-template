@@ -26,11 +26,11 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 // ROUTING
-const authController = require("./controllers/api/register");
-app.use("/auth", authController);
+const auth = require("./controllers/api/auth");
+app.use("/auth", auth);
 
-const userController = require("./controllers/api/userController");
-app.use("/user", userController);
+const user = require("./controllers/api/user");
+app.use("/user", user);
 
 // const dataController = require("./controllers/dataController");
 // app.use("/data", dataController);
